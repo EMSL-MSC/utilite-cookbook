@@ -1,6 +1,6 @@
 name             'utilite'
-maintainer       'YOUR_COMPANY_NAME'
-maintainer_email 'YOUR_EMAIL'
+maintainer       'David Brown'
+maintainer_email 'david.brown@pnnl.gov'
 license          'All rights reserved'
 description      'Installs/Configures utilite'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
