@@ -1,0 +1,11 @@
+# <%= @name %> - getty
+#
+# This service maintains a getty on <%= @name %>
+
+description     "Get a getty on <%= @name %>"
+
+start on runlevel [2345]
+stop on runlevel [016]
+respawn
+exec /sbin/getty -L <%= print_value @name+'.baudrate' %> <%= @name %>
+

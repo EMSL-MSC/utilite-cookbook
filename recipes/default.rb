@@ -2,7 +2,17 @@
 # Cookbook Name:: utilite
 # Recipe:: default
 #
-# Copyright 2015, YOUR_COMPANY_NAME
+# Copyright 2015, Battelle PNNL
 #
 # All rights reserved - Do Not Redistribute
 #
+node.default['utilite']['ttymxc1']['baudrate'] = 115200
+node.default['utilite']['ttymxc3']['baudrate'] = 115200
+template "ttymxc3" do
+  source "serial.erb"
+  variables :name => "ttymxc3"
+end
+template "ttymxc1" do
+  source "serial.erb"
+  variables :name => "ttymxc1"
+end
