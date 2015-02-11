@@ -16,3 +16,16 @@ template "ttymxc1" do
   source "serial.erb"
   variables :name => "ttymxc1"
 end
+
+package "dosfstools"
+package "e2fsprogs"
+
+node.default['filesystems']['BOOT']['device'] = "/dev/disk/by-label/BOOT"
+node.default['filesystems']['BOOT']['fstype'] = "vfat"
+node.default['filesystems']['BOOT']['owner'] = "root"
+node.default['filesystems']['BOOT']['group'] = "root"
+node.default['filesystems']['BOOT']['mode'] = "0755"
+node.default['filesystems']['BOOT']['mount'] = "/boot"
+
+include_recipe "filesystem"
+
