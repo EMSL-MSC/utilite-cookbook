@@ -19,6 +19,7 @@ end
 
 package "dosfstools"
 package "e2fsprogs"
+package "openssh-server"
 
 node.default['filesystems']['BOOT']['device'] = "/dev/disk/by-label/BOOT"
 node.default['filesystems']['BOOT']['fstype'] = "vfat"
