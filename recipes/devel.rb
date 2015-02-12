@@ -8,4 +8,4 @@ package "parted"
 package "kpartx"
 package "qemu-utils"
 package "default-jre-headless"
-
+package "pbzip2"
