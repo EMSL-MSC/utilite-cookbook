@@ -22,6 +22,7 @@ end
 package "dosfstools"
 package "e2fsprogs"
 package "openssh-server"
+package "dhcpcd5"
 
 node.default['filesystems']['BOOT']['device'] = "/dev/disk/by-label/BOOT"
 node.default['filesystems']['BOOT']['fstype'] = "vfat"
