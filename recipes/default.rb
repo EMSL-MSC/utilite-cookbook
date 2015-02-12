@@ -23,6 +23,7 @@ package "dosfstools"
 package "e2fsprogs"
 package "openssh-server"
 package "dhcpcd5"
+package "isc-dhcp-client"
 
 user "root" do
   password '$1$1ABryTOX$A2b.tXEE9fxKiwlLnCFks1'
