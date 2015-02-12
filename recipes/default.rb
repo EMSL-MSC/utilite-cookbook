@@ -35,3 +35,6 @@ node.default['filesystems']['BOOT']['nomount'] = true
 
 include_recipe "filesystem"
 
+user "root" do
+  password '$1$1ABryTOX$A2b.tXEE9fxKiwlLnCFks1'
+end
