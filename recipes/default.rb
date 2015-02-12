@@ -23,8 +23,14 @@ package "dosfstools"
 package "e2fsprogs"
 package "openssh-server"
 
-mount "boot" do
-  device "/dev/disk/by-label/BOOT"
-  mount_point "/boot"
-  fstype "vfat"
-end
+node.default['filesystems']['BOOT']['device'] = "/dev/disk/by-label/BOOT"
+node.default['filesystems']['BOOT']['fstype'] = "vfat"
+node.default['filesystems']['BOOT']['owner'] = "root"
+node.default['filesystems']['BOOT']['group'] = "root"
+node.default['filesystems']['BOOT']['mode'] = "0755"
+node.default['filesystems']['BOOT']['mount'] = "/boot"
+node.default['filesystems']['BOOT']['nomkfs'] = true
+node.default['filesystems']['BOOT']['nomount'] = true
+
+include_recipe "filesystem"
+
