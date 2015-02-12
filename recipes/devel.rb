@@ -1,4 +1,4 @@
-include "utilite::default"
+include_recipe "utilite::default"
 
 package "curl"
 package "wget"
