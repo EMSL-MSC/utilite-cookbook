@@ -8,7 +8,20 @@ end
 
 sudo "utilite" do
   nopasswd true
-  defaults '!requiretty'
+  user "utilite"
+  defaults [ '!requiretty' ]
+end
+
+directory "/home/utilite" do
+  owner "utilite"
+  group "utilite"
+  mode "0755"
+end
+
+directory "/home/utilite/.ssh" do
+  owner "utilite"
+  group "utilite"
+  mode "0700"
 end
 
 package "curl"
@@ -24,3 +37,4 @@ package "git"
 package "ruby1.9.1"
 package "rubygems"
 package "ruby1.9.1-dev"
+package "debootstrap"
