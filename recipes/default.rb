@@ -22,7 +22,6 @@ end
 package "dosfstools"
 package "e2fsprogs"
 package "openssh-server"
-package "dhcpcd5"
 package "isc-dhcp-client"
 
 user "root" do
